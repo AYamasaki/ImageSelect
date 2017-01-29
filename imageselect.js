@@ -1,13 +1,3 @@
-/*
- * ImageSelect jQuery Plugin
- * Version 1.2
- *
- * lgalvin
- * http://www.liam-galvin.co.uk/imageselect
- *
- */
-
-
 (function( $ ){
 
   var methods = {
@@ -49,7 +39,7 @@
           }else{
             header.append('<img style="width:' + (options.width-75) + 'px" />');
           }
-          
+
 
           var $options = $('option',element);
 
@@ -62,7 +52,7 @@
           imageSelect.append(header);
           imageSelect.append(dropdown);
 
-          
+
 
 
 
@@ -86,7 +76,7 @@
           });
 
           dropdown.css('max-height',options.dropdownHeight + 'px');
-            
+
           /*
           if(w < options.dropdownWidth){
               dropdown.css('height',options.height + 'px');
@@ -96,16 +86,16 @@
              var h = (options.height * rows);
              if(h > options.dropdownHeight){
                 dropdown.css('height',options.dropdownHeight + 'px');
-                
+
              }else{
-                dropdown.css('height',h + 'px'); 
+                dropdown.css('height',h + 'px');
              }
           }*/
 
           element.ImageSelect('update',{src:selectedImage});
 
       },
-      
+
       update:function(options){
 
           var element = $(this);
@@ -154,7 +144,7 @@
                 }).each(function() {
                   if(this.complete) $(this).load();
                 });
-                
+
              }
 
              $('#'+id + ' .jqis_header img').animate({opacity:1});
@@ -196,7 +186,7 @@
 
                 $('#'+id + ' .jqis_dropdown').height(mh);
             }
-              
+
           }
       },
       close:function(){
